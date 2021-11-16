@@ -35,6 +35,7 @@
                         <th>Sr.</th>
                         <th>Name</th>
                         <th>Email</th>
+                         <th>Organization</th>
                       </thead>
                       <tbody class="mainTableBody">
                         <% for (x in users) { %>
@@ -47,6 +48,13 @@
                             </td>
                             <td>
                               <%= users[x].email %>
+                            </td>
+                            <td>
+                              <%if (users[x].email==='syadav@deqode.com' ) { %>
+                                Deqode
+                                <% } else { %>
+                                  Unknown
+                                  <% } %>
                             </td>
                           </tr>
                           <% } %>
